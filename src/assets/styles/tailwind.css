@@ -564,6 +564,21 @@ video {
   border-color: #2563eb;
 }
 
+
+
+[type='text'].invalid\:field, [type='email'].invalid\:field, [type='url'].invalid\:field, [type='password'].invalid\:field, [type='number'].invalid\:field, [type='date'].invalid\:field, [type='datetime-local'].invalid\:field, [type='month'].invalid\:field, [type='search'].invalid\:field, [type='tel'].invalid\:field, [type='time'].invalid\:field, [type='week'].invalid\:field, [multiple].invalid\:field, .textareainvalid\:field, .selectinvalid\:field {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-inset: var(--tw-empty,/*/*/ /*/*/);
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color-red: #ff0000; /* Cambia el color rojo aquí */
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color-red);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+  border-color: #ff0000; /* Cambia el color rojo aquí */
+}
+
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #71717a;
   opacity: 1;
@@ -3051,6 +3066,13 @@ select {
 
 .ring-inset {
   --tw-ring-inset: inset;
+}
+
+.invalid\:field:invalid:focus {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-color-red: rgba(241, 7, 7, 0.88);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color-red);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
 .focus\:ring-0:focus {
